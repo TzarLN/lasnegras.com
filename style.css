@@ -129,3 +129,70 @@ body {
   p {
     font-size: 16px;
   }
+  .container-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    grid-gap: 2rem;
+    margin: 2rem;
+  }
+  
+  .card-rest {
+    height: 215px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  
+  .h3-card {
+    color: white;
+    font-size: 24px;
+    margin: 20px 0 0 20px;
+    z-index: 1;
+  }
+  
+  .p-card {
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    align-self: end;
+    margin: 0 0 20px 20px;
+    letter-spacing: 0.5px;
+    z-index: 1;
+  }
+  
+  .img-card {
+    position: absolute;
+    top: 0;
+    height: 110%;
+    width: 100%;
+    z-index: 0;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  
+  .card-rest:hover {
+    transform: scale(1.035, 1.035);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .card-rest:hover img {
+    transform: translateY(-10px);
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:#37474f;
+  }
+  .card-rest:hover .overlay {
+    opacity: 1;
+  }
