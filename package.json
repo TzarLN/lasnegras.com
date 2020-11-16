@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/TzarLN/lasnegras.com#readme",
   "dependencies": {
-   
+    "materialize-css": "^1.0.0-rc.2"
   }
 }
